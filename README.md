@@ -6,10 +6,10 @@ This project simulates the classic "Dining Philosophers" problem to explore conc
 
 ## Features
 
-- **Concurrency Management**: Implements philosophers as threads (mandatory) or processes (bonus) to simulate concurrent actions.
-- **Fork Management**: Uses mutexes (mandatory) or semaphores (bonus) to manage fork usage and avoid conflicts.
-- **State Logging**: Logs the state changes of each philosopher with precise timestamps.
-- **Death Detection**: Detects and logs philosopher death due to starvation within a specified time frame.
+- **Concurrency Management**: Implement philosophers first as threads, then as processes to simulate concurrent actions.
+- **Fork Management**: Use mutexes with threads, and semaphores with processes to manage fork usage and avoid conflicts.
+- **State Logging**: Log the state changes of each philosopher with precise timestamps.
+- **Death Detection**: Detect and log philosopher death due to starvation within a specified time frame.
 
 ## Arguments
 
@@ -27,11 +27,19 @@ The program takes the following command-line arguments:
    ```sh
    git clone <repository-url>
 
-3. Compile the project:
+2. Compile the project (philosophers as threads):
+   ```sh
+   make
+
+3. Run the project (philosophers as threads):
+   ```sh
+   ./philo number_of_philosophers time_to_die time_to_eat time_to_sleep [number_of_times_each_philosopher_must_eat]
+
+4. Compile the project (philosophers as processes):
    ```sh
    make bonus
 
-5. Run the project:
+5. Run the project (philosophers as processes):
    ```sh
    ./philo_bonus number_of_philosophers time_to_die time_to_eat time_to_sleep [number_of_times_each_philosopher_must_eat]
 
